@@ -6,7 +6,7 @@ on:
     branches-ignore:
       - 'main'
     paths:
-      - ./chapter9/zero-to-next
+      - ./
 
 jobs:
   build:
@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: 16
       - name: 'install dependencies'
-        working-directory: ./chapter9/zero-to-next
+        working-directory: ./
         run: npm ci
       - name: 'build'
-        working-directory: ./chapter9/zero-to-next
+        working-directory: ./
         run: npm run build
